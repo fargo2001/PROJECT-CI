@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= '/codeigniter';
+$config['base_url']	= '/PROJECT-CI';
 
 /*
 |--------------------------------------------------------------------------
