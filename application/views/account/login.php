@@ -11,5 +11,9 @@
     <input type="password" name="password" /> <br>
 
     <input type="submit" name="submit" value="Login" />
+	
+	<input type="text" name="kodok" value="confirm" />
+	
+	<input type="text" name="kodok2" value="confirm3" />
 
 </form>
