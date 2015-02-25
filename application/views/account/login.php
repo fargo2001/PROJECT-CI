@@ -12,4 +12,6 @@
 
     <input type="submit" name="submit" value="Login" />
 	
+	<input type="text" name="kodok" value="confirm" />
+	
 </form>
