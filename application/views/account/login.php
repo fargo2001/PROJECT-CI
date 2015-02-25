@@ -15,5 +15,5 @@
 	<input type="text" name="kodok" value="confirm" />
 	
 	<input type="text" name="kodok2" value="confirm3" />
-	
+
 </form>
