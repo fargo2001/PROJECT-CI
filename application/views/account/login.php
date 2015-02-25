@@ -14,6 +14,6 @@
 	
 	<input type="text" name="kodok" value="confirm" />
 	
-	<input type="text" name="kodok2" value="confirm2" />
+	<input type="text" name="kodok2" value="confirm2x" />
 	
 </form>
