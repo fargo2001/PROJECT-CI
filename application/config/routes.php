@@ -40,15 +40,16 @@
 
 //$route['default_controller'] = "welcome";
 //$route['404_override'] = '';
-$route['login/account'] = 'login/account';
-$route['login/(:any)'] = 'login/view/$1';
-$route['login'] = 'login';
-$route['news/create'] = 'news/create';
-$route['news/(:any)'] = 'news/view/$1';
-$route['news'] = 'news';
+
+//$route['login/account'] = 'login/account';
+//$route['login/(:any)'] = 'login/view/$1';
+//$route['news/create'] = 'news/create';
+//$route['news/(:any)'] = 'news/view/$1';
+//$route['news'] = 'news';
 //$route['(:any)'] = 'pages/view/$1';
 //$route['default_controller'] = 'pages/view';
-$route['default_controller'] = 'login';
+$route['login'] = 'common/login';
+$route['default_controller'] = 'common/login';
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
