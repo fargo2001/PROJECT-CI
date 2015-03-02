@@ -18,7 +18,7 @@ class Header extends FO_Controller {
 
             $session_data = $this->session->userdata('logged_in');
             $data['username'] = $session_data['username'];
-            
+
         }
 
         return $this->load->view('common/header', $data, TRUE);

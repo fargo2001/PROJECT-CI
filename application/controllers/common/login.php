@@ -4,7 +4,7 @@ class Login extends FO_Controller {
 
     public function __construct() {
         parent::__construct();
-        $this->load->model('user/user', '', TRUE);
+        $this->load->model('user/user_model', '', TRUE);
         $this->user_logged();
     }
 
@@ -12,7 +12,7 @@ class Login extends FO_Controller {
         $this->load->helper( array('form') );
         $this->lang->load('common/login');
 
-    	$dataHeader['title'] = 'Please Login to Continue';
+    	$data['title'] = 'Please Login to Continue';
 
         if ($this->input->post() !== FALSE) {
             // Set validation rule form login
@@ -28,7 +28,7 @@ class Login extends FO_Controller {
             }
         }
 
-        $data['header'] = $this->load->controller('common/header', $dataHeader);
+        $data['header'] = $this->load->controller('common/header', $data);
         $data['footer'] = $this->load->controller('common/footer');
 
         $this->load->view('common/login', $data);
@@ -39,7 +39,7 @@ class Login extends FO_Controller {
         $username = $this->input->post('username');
 
         // Query the database
-        $result = $this->user->login($username, $password);
+        $result = $this->user_model->login($username, $password);
 
         if ($result) {
 

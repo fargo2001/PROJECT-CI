@@ -9,6 +9,28 @@ class Menu extends FO_Controller {
         //$session_data = $this->session->userdata('logged_in');
         //$data['username'] = $session_data['username'];
 
-        return $this->load->view('common/menu', '', TRUE);
+        $data['dashboard'] = base_url('common/dashboard');
+        
+        $data['list_menu_master_purchasing'][] = array(
+            'text' => 'Barang',
+            'link' => base_url('master/barang')
+        );
+
+        $data['list_menu_setting'][] = array(
+            'text' => 'User',
+            'link' => 'User'
+        );
+
+        $data['list_menu_setting'][] = array(
+            'text' => 'User Group',
+            'link' => 'User Group'
+        );
+
+        $data['list_menu_setting'][] = array(
+            'text' => 'Setting Umum',
+            'link' => base_url('user/setting')
+        );
+
+        return $this->load->view('common/menu', $data, TRUE);
     }
 }

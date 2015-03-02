@@ -6,6 +6,14 @@ class FO_Loader extends CI_Loader {
         parent::__construct();
     }
 
+    public function viewData($data) {
+        if ($data == '') {
+            return;
+        }
+
+        echo $data;
+    }
+
     public function controller($controller, $args = array()) {
         if ($controller == '') {
             return;
@@ -58,7 +66,7 @@ class FO_Loader extends CI_Loader {
 	    $CI =& get_instance();
 
 	    //$CI->load->library('setting');
-	    $view = 'themes/' . $CI->setting->get('config_theme') . '/template/' . $view;
+	    $view = 'themes/' . $CI->config->get('config_theme') . '/template/' . $view;
 
 		return $this->_ci_load(array('_ci_view' => $view, '_ci_vars' => $this->_ci_object_to_array($vars), '_ci_return' => $return));
 	}

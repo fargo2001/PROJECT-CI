@@ -15,7 +15,24 @@
 </div>
 
 <div class="container-fluid">
-
+    <input type="button" onclick="testAjax()" name="ajaxbutton" value="Test Ajax" />
 </div>
 
+<script type="text/javascript">
+    function testAjax() {
+        var r = confirm("Are you sure?");
+
+        if (!r) return;
+
+        $.ajax({
+            url:'dashboard/testAjax/555',
+            dataType:'text',
+            success:function( data ) {
+                console.log(data);
+            }
+        });
+
+        alert("Wow Ajax");
+    }
+</script>
 <?php echo $footer; ?>
