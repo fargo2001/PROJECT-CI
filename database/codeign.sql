@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 25, 2015 at 10:03 AM
+-- Generation Time: Mar 02, 2015 at 04:02 AM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.11
 
@@ -67,6 +67,28 @@ CREATE TABLE IF NOT EXISTS `quotes` (
 INSERT INTO `quotes` (`quotes_id`, `user_id`, `quote`) VALUES
 (1, 1, 'Jika memang masih bisa mulut ku berbicara !'),
 (2, 2, 'Avenger, Roll on !!');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `setting`
+--
+
+CREATE TABLE IF NOT EXISTS `setting` (
+  `setting_id` int(11) NOT NULL AUTO_INCREMENT,
+  `group` varchar(25) NOT NULL,
+  `key` varchar(50) NOT NULL,
+  `value` text NOT NULL,
+  `serialized` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`setting_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `setting`
+--
+
+INSERT INTO `setting` (`setting_id`, `group`, `key`, `value`, `serialized`) VALUES
+(1, 'config', 'config_theme', 'default', 0);
 
 -- --------------------------------------------------------
 
