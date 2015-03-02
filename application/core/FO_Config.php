@@ -20,4 +20,24 @@ class FO_Config extends CI_Config {
 
         return $query->row()->value;
     }
+
+    public function set($key, $value, $serialized = 0) {
+        if ( ($key == '') || ($value == '') ) return;
+
+        $CI =& get_instance();
+
+        $CI->db->select('*')->where('group', 'config')->where('key', $key);
+
+        $query = $this->db->get('setting');
+        
+
+        $data = array(
+            'group' => 'config',
+            'key' => $key,
+            'value' => $value,
+            'serialize' => $serialized
+        );
+
+        $CI->db->insert('setting', $data);
+    }
 }
